@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Morkester Gameworks</title>
+        <link rel="icon" href="media/favicion.png" type="image/png">
+        <meta property="og:type" content="website">
+        <meta name="og:site_name" content="Morkester Gameworks"/>
+        <meta name="og:title" content="Morkester Gameworks | Devs for hire"/>
+        <meta name="og:description" content="Studio of developers for hire. From websites and mobile apps to Discord bots and Roblox games."/>
+        <meta name="og:image" content="https://support-bot.autocode.dev/website@main/media/aboutUs.png"/>
+        <meta name="theme-color" content="#607494">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="setup/style.css">
+    </head>
+
+    <!-- Body -->
+    <body>
+        <!--
+        <div class="snowflakes" aria-hidden="true">
+            <div class="snowflake">
+            ❅
+            </div>
+            <div class="snowflake">
+            ❆
+            </div>
+            <div class="snowflake">
+            ❅
+            </div>
+            <div class="snowflake">
+            ❆
+            </div>
+            <div class="snowflake">
+            ❅
+            </div>
+            <div class="snowflake">
+            ❆
+            </div>
+            <div class="snowflake">
+              ❅
+            </div>
+            <div class="snowflake">
+              ❆
+            </div>
+            <div class="snowflake">
+              ❅
+            </div>
+            <div class="snowflake">
+              ❆
+            </div>
+            <div class="snowflake">
+              ❅
+            </div>
+            <div class="snowflake">
+              ❆
+            </div>
+        </div>
+        -->
+
+        <!-- Navbar (sit on top) -->
+        <div class="topBar">
+            <a href="#about" class="topBarTitle">Morkester Gameworks</a>
+
+            <!-- Right-sided navbar links. Hide them on small screens -->
+            <div class="topBarButonHolder">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <!-- Page content -->
+        <div class="content">
+            <!-- About Section -->
+            <div class="infoCard" id="about">
+                <div class="imageHolder">
+                    <img src="media/aboutUs.png" alt="About Us Icon" width="1300" height="1450">
+                </div>
+                
+                <div class="textHolder">
+                    <h1>About Morkester Gameworks</h1>
+                    <br>
+                    <h5>Tradition since 2021</h5>
+                    <p>Morkester Gameworks is a multi-platform developer team. We are offering you the to hire 15 amazingly skilled developers from around the world. This studio was firstly published as FCH Studio and in early 2022 renamed to Fozzy Studio. Of course, nothing of this wouldn't be possible on the first if we didn't have our founder <span class="textTag">FozzyCH#3679</span> who got the idea to run this amazing studio.</p>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <!-- Advertisment -->
+            <a class="advert" href="https://cutt.ly/fire-bot" target="_blank">
+                <img src="advertisment/fireBot_website.png" alt="FireBotAdd" height="90" width="728">
+                <span>Advertisement</span>
+            </a>
+            
+            <hr>
+            
+            <!-- Menu Section -->
+            <div id="services" class="infoCard">
+                <div class="textHolder">
+                    <h1>Services</h1>
+                    <br>
+                    <h5>Roblox game</h5>
+                    <p>Roblox is a 3D world game platform with millions of experiences created by everyday people. We offer you help with certain parts of the game or creating the whole game.</p><br>
+                    
+                    <h5>Scripting</h5>
+                    <p>There is one platform called <a href="https://stackoverflow.com" target="_blank">Stack Overflow</a>. It's used by professional programmers all over the world. It's only bad part is that you can't hire someone to do all debugging for you. That's where we get on stage.</p><br>
+                    
+                    <h5>Android application</h5>
+                    <p>Android is a big platform run by Google and it's used worldwide by users on their smartphones and Wear OS watches. Phone devices are used more than computers. That is one of the reasons why you need to have one for your business.</p><br>
+                    
+                    <h5>Websites</h5>
+                    <p>Website is one of the most important IT services we provide. Why? Because websites can be used on any device with internet access. As examples of websites, we can give you the page you are currently on.</p><br>
+                    
+                    <h5>There is more but...</h5>
+                    <p>...we offer a lot of IT services but it will hard for you, and us, if we put all of them on this page. That's why if you are interested in more services we provide you can contact us by scrolling down to contact section.</p>    
+                </div>
+                
+                <div class="imageHolder">
+                    <img src="media/robloxStudioThumbnail.png" alt="Roblox Studio Thumbnail" class="except">
+                    <img src="media/mobileAppDevelop.png" alt="Mobile App development" class="except">
+                    <img src="media/script.png" alt="Mobile App development" class="except">
+                </div>
+            </div>
+            
+            <hr>
+            
+            <!-- Advertisment -->
+            <a class="advert" href="https://web.roblox.com/premium/membership" target="_blank">
+                <img src="advertisment/dumbAdd.png" alt="FireBotAdd" height="90" width="728">
+                <span>Advertisement</span>
+            </a>
+            
+            <hr>
+            
+            <!-- Contact us -->
+            <div id="contact" class="infoCard">
+                <div class="imageHolder">
+                    <img src="media/aboutUs.png" alt="About Us Icon">
+                </div>
+            
+                <div class="textHolder">
+                    <h1>Contact Morkester Gameworks</h1>
+                    
+                    <p id="contactText"></p>
+                    
+                    <textarea id="emailBox" cols="30" rows="10">E-mail / Discord tag</textarea>
+                    <textarea id="messageBox" cols="30" rows="10">Message</textarea>
+
+                    <button id="submitButt" onclick="submitSupp()">Submit</button>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <hr class="specialHr">
+            
+            <div class="footer">
+                <p>Made by Game Gum Studio</p>
+                <p>©2021-2023 Morkester Gameworks™</p>
+            </div>
+        </div>
+    </body>
+
+    <script src="setup/reportPage.js" defer></script>
+    <script src="setup/supportSubmit.js" defer></script>
+</html>
