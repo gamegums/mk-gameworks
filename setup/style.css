@@ -91,18 +91,19 @@ a:hover {
     top: 0;
     left: 0;
     position: fixed;
-    width: 100%;
+    width: calc(100% - 2rem - 13px);
     z-index: 1;
-    color: #000;
-    background-color: #fff;
+    color: #fff;
+    background-color: #8695b0;
     padding: 8px 16px!important;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
-    width: 100%;
+    margin: 0.5rem;
+    border-radius: 24px;
 }
 .topBar .topBarTitle {
     padding: 8px 16px;
-    float: left;
     width: auto;
+    float: left;
     border: none;
     display: block;
     outline: 0;
@@ -115,13 +116,11 @@ a:hover {
     transition: 0.5s;
 }
 .topBar .topBarTitle:hover {
-    color: #000;
-    background-color: #ccc;
     transition: 0.5s;
+    color: #ffead8;
 }
 .topBar .topBarButonHolder {
     float: right;
-    color: #000;
     margin-right: 25px;
 }
 .topBar .topBarButonHolder a {
@@ -141,17 +140,14 @@ a:hover {
     transition: 0.5s;
 }
 .topBar .topBarButonHolder a:hover {
-    color: #000;
-    background-color: #ccc;
     transition: 0.5s;
+    color: #ffead8;
 }
-
 
 /* Content */
 .content {
     margin-left: auto;
     margin-right: auto;
-    /*padding-top: 64px!important;*/
     padding-bottom: 24px!important;
 }
 
