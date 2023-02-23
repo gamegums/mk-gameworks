@@ -19,8 +19,8 @@ body {
 
 /* Multi used tags*/
 .textTag {
-    color: #000!important;
-    background-color: #f1f1f1!important;
+    background-color: #8695b0;
+    color: #fff;
     border-radius: 5px;
     font-size: 18px!important;
     display: inline-block;
@@ -29,14 +29,14 @@ body {
 }
 hr {
     border: 0;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #8695b0;
     margin: 20px 0;
     box-sizing: content-box;
     height: 0;
     overflow: visible;
 }
 .specialHr {
-    border-top: 8px solid #bbb;
+    border-top: 8px solid #8695b0;
     border-radius: 5px;
 }
 .advert {
@@ -59,14 +59,13 @@ hr {
     font-family: "Segoe UI", Arial, sans-serif;
 }
 a {
-    color: #3556E3;
-    font-weight: 400;
+    color: #8695b0;
+    font-weight: 500;
     text-decoration: none;
     transition: 0.5s;
 }
 a:hover {
     text-decoration: underline;
-    color: #1A16B4;
     transition: 0.5s;
 }
 
@@ -154,7 +153,7 @@ a:hover {
 /* On page content */
 .infoCard {
     display: flex;
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 .infoCard .imageHolder {
@@ -216,7 +215,6 @@ a:hover {
     bottom: 0;
     width: 100%;
     background-color: #fff;
-    color: #000;
     text-align: center;
 }
 .footer p {
@@ -225,7 +223,23 @@ a:hover {
     font-weight: 400;
     margin: 10px 0;
     font-size: 18px;
+    margin-top: 0;
 }
+
+.socialMediaLinks {
+    display: flex;
+    justify-content: center;
+}
+.socialMediaLinks a svg {
+    height: 3rem;
+    margin: 0rem 0.5rem;
+    transition: transform 1s ease-in-out;
+}
+.socialMediaLinks a svg:hover {
+    filter: drop-shadow(0px 2px 4px rgb(0 0 0 / 30%));
+    transform: rotate(360deg);
+}
+
 
 /* Contact form */
 textarea {
