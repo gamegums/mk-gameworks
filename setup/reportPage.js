@@ -53,7 +53,7 @@ if (getCookie(`admin`) != true) {
         }
     );
     */
-    fetch('https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/websiteReport/', device, window.location.href)
+    fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/websiteReport?device=${device}&location=${window.location.href}`)
     .then((response) => response.json())
     .then((data) => console.log(data));
 
