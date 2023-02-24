@@ -28,10 +28,8 @@ if (navigator.userAgent.includes('iP')) {
     var device = "Computer (Desktop)"
 };
 
-console.log(getCookie(`admin`));
-
 if (getCookie(`admin`) != true) {
-    fetch(
+    /*fetch(
         'https://discord.com/api/webhooks/1078783014789709945/umnZVoE-dphFD6Oj7rJ_Mxss_rZU5FNAp9Jw51OcgfBF6xhgfs809i7O6ecT1xj6hPK-',
         {
             method: 'post',
@@ -53,5 +51,19 @@ if (getCookie(`admin`) != true) {
             },
             }),
         }
-        );
+    );
+    */
+   
+    fetch('https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/websiteReport/',
+        {
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                device: `${device}`,
+                location: `${window.location.href}`
+            }),
+        }
+    );
 }
