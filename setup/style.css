@@ -313,7 +313,7 @@ textarea {
     }
     .topBar .topBarMobHolder {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         margin: 0rem 0.5rem;
     }
     .topBar .topBarMobHolder a {
