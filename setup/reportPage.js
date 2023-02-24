@@ -53,7 +53,11 @@ if (getCookie(`admin`) != true) {
         }
     );
     */
-   
+    fetch('https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/websiteReport/', device, window.location.href)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+
+    /*
     fetch('https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/websiteReport/',
         {
             method: 'get',
@@ -65,5 +69,5 @@ if (getCookie(`admin`) != true) {
                 location: `${window.location.href}`
             }),
         }
-    );
+    );*/
 }
