@@ -28,7 +28,9 @@ if (navigator.userAgent.includes('iP')) {
     var device = "Computer (Desktop)"
 };
 
-if (getCookie(`admin`) != `true`) {
+console.log(getCookie(`admin`));
+
+if (getCookie(`admin`) != true) {
     fetch(
         'https://discord.com/api/webhooks/958287758852522034/UHkbjhXJFlpFpmgnUsdiUcQ7sK80eG3MRGhvnKt4Pgqr_BnT0I_NfghB1DUCdDpr6kjw',
         {
