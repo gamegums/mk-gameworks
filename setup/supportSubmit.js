@@ -2,15 +2,23 @@ function submitSupp() {
     var message = document.getElementById(`messageBox`).value;
     var contactAdress = document.getElementById(`emailBox`).value;
 
+    function sendAPI() {
+        fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/website/supportTicket?contactDetails=${contactAdress}&message=${message}`)
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+
+        document.getElementById(`submitButt`).style.display = `none`;
+        document.getElementById(`contactText`).innerHTML = `Sent successfully!`;
+    }
+
     if (message.length >= 10) {
         if (message.length <= 1000) {
-            if (contactAdress.includes(`@`) || contactAdress.includes(`#`)) {
-                fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/website/supportTicket?contactDetails=${contactAdress}&message=${message}`)
-                .then((response) => response.json())
-                .then((data) => console.log(data));
+            if (contactAdress.includes(`@`)) {
+                sendAPI();
+            } else if (contactAdress.includes(`#`)) {
+                contactAdress = contactAdress.replace(`#`, `%23`);
 
-                document.getElementById(`submitButt`).style.display = `none`;
-                document.getElementById(`contactText`).innerHTML = `Sent successfully!`;
+                sendAPI();
             } else {
                 document.getElementById(`submitButt`).style.display = `none`;
                 document.getElementById(`contactText`).innerHTML = `E-mail adress must contain <b>@something.com</b>, and Discord tag <b>Me#12345</b>.`;
