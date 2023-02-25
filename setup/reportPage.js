@@ -19,6 +19,14 @@ function getCookie(name) {
     return null;
 }
 
+var advertImages = ["dumbAdd.png", "fireBot_website.png", "partnershipPromotion.png"];
+
+const add1 = Math.floor(Math.random() * advertImages.length);
+const add2 = Math.floor(Math.random() * advertImages.length);
+
+document.getElementById("add1").src = `advertisment/${advertImages[add1]}`;
+document.getElementById("add2").src = `advertisment/${advertImages[add2]}`;
+
 // Device lookup
 if (navigator.userAgent.includes('iP')) {
     var device = "Apple phone/tablet"
@@ -29,7 +37,7 @@ if (navigator.userAgent.includes('iP')) {
 };
 
 if (getCookie(`admin`) != `true`) {
-    fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/websiteReport?device=${device}&location=${window.location.href}`)
+    fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/websiteReport?device=${device}&location=${window.location.href}&add1=${advertImages[add1]}&add2=${advertImages[add2]}`)
     .then((response) => response.json())
     .then((data) => console.log(data));
 }
