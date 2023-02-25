@@ -16,8 +16,10 @@ function submitSupp() {
             if (contactAdress.includes(`@`)) {
                 sendAPI();
             } else if (contactAdress.includes(`#`)) {
-                contactAdress = contactAdress.replace(`#`, `%23`);
-
+                while (contactAdress.includes(`#`)) {
+                    contactAdress = contactAdress.replace(`#`, `%23`);
+                }
+                
                 sendAPI();
             } else {
                 document.getElementById(`submitButt`).style.display = `none`;
