@@ -19,13 +19,22 @@ function getCookie(name) {
     return null;
 }
 
-var advertImages = ["dumbAdd.png", "fireBot_website.png", "partnershipPromotion.png"];
+var hasAds = false;
 
-const add1 = Math.floor(Math.random() * advertImages.length);
-const add2 = Math.floor(Math.random() * advertImages.length);
+var add1Img = document.getElementById("add1");
+var add2Img = document.getElementById("add2");
 
-document.getElementById("add1").src = `advertisment/${advertImages[add1]}`;
-document.getElementById("add2").src = `advertisment/${advertImages[add2]}`;
+if (add1Img !== null) {
+    var advertImages = ["dumbAdd.png", "fireBot_website.png", "partnershipPromotion.png"];
+
+    const add1 = Math.floor(Math.random() * advertImages.length);
+    const add2 = Math.floor(Math.random() * advertImages.length);
+    
+    add1Img.src = `advertisment/${advertImages[add1]}`;
+    add2Img.src = `advertisment/${advertImages[add2]}`;
+
+    hasAds = true;
+}
 
 // Device lookup
 if (navigator.userAgent.includes('iP')) {
@@ -37,7 +46,9 @@ if (navigator.userAgent.includes('iP')) {
 };
 
 if (getCookie(`admin`) != `true`) {
-    fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/website/websiteReport?device=${device}&location=${window.location.href}&add1=${advertImages[add1]}&add2=${advertImages[add2]}`)
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+    if (hasAds == true) {
+        fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/website/websiteReport?device=${device}&location=${window.location.href}&add1=${advertImages[add1]}&add2=${advertImages[add2]}`)
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    } 
 }
