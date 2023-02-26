@@ -30,17 +30,14 @@ var addHolder2 = document.getElementById("addHolder2");
 if (add1Img !== null) {
     var advertImages = ["dumbAdd.png", "fireBot_website.png", "partnershipPromotion.png"];
 
-    var linkImage = {
-        "dumbAdd.png": "https://web.roblox.com/premium/membership",
-        "fireBot_website.png": "https://cutt.ly/fire-bot",
-        "partnershipPromotion.png": "#"
-    }
+    var linkImage = ["https://web.roblox.com/premium/membership", "https://cutt.ly/fire-bot", "#"];
+    
 
     const add1 = Math.floor(Math.random() * advertImages.length);
     const add2 = Math.floor(Math.random() * advertImages.length);
 
-    addHolder1.src = linkImage.advertImages[add1];
-    addHolder2.src = linkImage.advertImages[add2];
+    addHolder1.src = linkImage[advertImages[add1]];
+    addHolder2.src = linkImage[advertImages[add2]];
     
     add1Img.src = `advertisment/${advertImages[add1]}`;
     add2Img.src = `advertisment/${advertImages[add2]}`;
