@@ -37,8 +37,8 @@ if (add1Img !== null) {
 
     console.log(linkImage[advertImages[add1]]);
 
-    addHolder1.href = linkImage[advertImages[add1]];
-    addHolder2.href = linkImage[advertImages[add2]];
+    addHolder1.href = linkImage[add1];
+    addHolder2.href = linkImage[add2];
     
     add1Img.src = `advertisment/${advertImages[add1]}`;
     add2Img.src = `advertisment/${advertImages[add2]}`;
