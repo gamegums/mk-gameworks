@@ -31,10 +31,11 @@ if (add1Img !== null) {
     var advertImages = ["dumbAdd.png", "fireBot_website.png", "partnershipPromotion.png"];
 
     var linkImage = ["https://web.roblox.com/premium/membership", "https://cutt.ly/fire-bot", "#"];
-    
 
     const add1 = Math.floor(Math.random() * advertImages.length);
     const add2 = Math.floor(Math.random() * advertImages.length);
+
+    console.log(linkImage[advertImages[add1]]);
 
     addHolder1.href = linkImage[advertImages[add1]];
     addHolder2.href = linkImage[advertImages[add2]];
