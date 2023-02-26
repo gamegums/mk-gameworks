@@ -36,8 +36,8 @@ if (add1Img !== null) {
     const add1 = Math.floor(Math.random() * advertImages.length);
     const add2 = Math.floor(Math.random() * advertImages.length);
 
-    addHolder1.src = linkImage[advertImages[add1]];
-    addHolder2.src = linkImage[advertImages[add2]];
+    addHolder1.href = linkImage[advertImages[add1]];
+    addHolder2.href = linkImage[advertImages[add2]];
     
     add1Img.src = `advertisment/${advertImages[add1]}`;
     add2Img.src = `advertisment/${advertImages[add2]}`;
