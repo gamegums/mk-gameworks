@@ -58,5 +58,9 @@ if (getCookie(`admin`) != `true`) {
         fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/website/websiteReport?device=${device}&location=${window.location.href}&add1=${advertImages[add1]}&add2=${advertImages[add2]}`)
         .then((response) => response.json())
         .then((data) => console.log(data));
-    } 
+    } else {
+        fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/website/websiteReport?device=${device}&location=${window.location.href}&add1=null&add2=null`)
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    }
 }
