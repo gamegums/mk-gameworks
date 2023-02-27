@@ -35,8 +35,6 @@ if (add1Img !== null) {
     const add1 = Math.floor(Math.random() * advertImages.length);
     const add2 = Math.floor(Math.random() * advertImages.length);
 
-    console.log(linkImage[advertImages[add1]]);
-
     addHolder1.href = linkImage[add1];
     addHolder2.href = linkImage[add2];
     
