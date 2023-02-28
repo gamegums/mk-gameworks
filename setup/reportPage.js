@@ -44,10 +44,9 @@ if (add1Img !== null) {
     hasAds = true;
 }
 
-var currURL
-while (window.location.href.includes(`#`)) {
-    currURL = currURL.replace(`#`, `%23`);
-}
+var currURL = window.location.href.replace(`#`, `%23`);
+
+console.log(currURL)
 
 // Device lookup
 if (navigator.userAgent.includes('iP')) {
