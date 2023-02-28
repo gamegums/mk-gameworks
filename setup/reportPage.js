@@ -42,6 +42,8 @@ if (add1Img !== null) {
     add2Img.src = `advertisment/${advertImages[add2]}`;
 
     hasAds = true;
+
+    console.log("Done setup!")
 }
 
 // Device lookup
@@ -52,6 +54,11 @@ if (navigator.userAgent.includes('iP')) {
 } else if (navigator.userAgent.includes('Windows') || navigator.userAgent.includes('Chrome') || navigator.userAgent.includes('Apple')) {
     var device = "Computer (Desktop)"
 };
+
+
+console.log(add1)
+console.log(hasAds)
+
 
 if (getCookie(`admin`) != `true`) {
     if (hasAds == true) {
