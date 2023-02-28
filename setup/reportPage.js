@@ -44,6 +44,11 @@ if (add1Img !== null) {
     hasAds = true;
 }
 
+var currURL
+while (window.location.href.includes(`#`)) {
+    currURL = currURL.replace(`#`, `%23`);
+}
+
 // Device lookup
 if (navigator.userAgent.includes('iP')) {
     var device = "Apple phone/tablet"
@@ -55,11 +60,11 @@ if (navigator.userAgent.includes('iP')) {
 
 if (getCookie(`admin`) != `true`) {
     if (hasAds == true) {
-        fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/website/websiteReport?device=${device}&location=${window.location.href}&add1=${advertImages[add1Loc]}&add2=${advertImages[add2Loc]}`)
+        fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/website/websiteReport?device=${device}&location=${currURL}&add1=${advertImages[add1Loc]}&add2=${advertImages[add2Loc]}`)
         .then((response) => response.json())
         .then((data) => console.log(data));
     } else {
-        fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/website/websiteReport?device=${device}&location=${window.location.href}&add1=null&add2=null`)
+        fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/website/websiteReport?device=${device}&location=${currURL}&add1=null&add2=null`)
         .then((response) => response.json())
         .then((data) => console.log(data));
     }
