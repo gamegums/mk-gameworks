@@ -46,8 +46,6 @@ if (add1Img !== null) {
 
 var currURL = window.location.href.replace(`#`, `%23`);
 
-console.log(currURL)
-
 // Device lookup
 if (navigator.userAgent.includes('iP')) {
     var device = "Apple phone/tablet"
