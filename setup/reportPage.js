@@ -32,14 +32,14 @@ if (add1Img !== null) {
 
     var linkImage = ["https://web.roblox.com/premium/membership", "https://cutt.ly/fire-bot", "#"];
 
-    const add1Loc = Math.floor(Math.random() * advertImages.length);
-    const add2Loc = Math.floor(Math.random() * advertImages.length);
+    var add1Loc = Math.floor(Math.random() * advertImages.length);
+    var add2Loc = Math.floor(Math.random() * advertImages.length);
 
     addHolder1.href = linkImage[add1];
     addHolder2.href = linkImage[add2];
     
-    add1Img.src = `advertisment/${advertImages[add1]}`;
-    add2Img.src = `advertisment/${advertImages[add2]}`;
+    add1Img.src = `advertisment/${advertImages[add1Loc]}`;
+    add2Img.src = `advertisment/${advertImages[add2Loc]}`;
 
     hasAds = true;
 
