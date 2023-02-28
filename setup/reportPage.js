@@ -32,8 +32,8 @@ if (add1Img !== null) {
 
     var linkImage = ["https://web.roblox.com/premium/membership", "https://cutt.ly/fire-bot", "#"];
 
-    const add1 = Math.floor(Math.random() * advertImages.length);
-    const add2 = Math.floor(Math.random() * advertImages.length);
+    const add1Loc = Math.floor(Math.random() * advertImages.length);
+    const add2Loc = Math.floor(Math.random() * advertImages.length);
 
     addHolder1.href = linkImage[add1];
     addHolder2.href = linkImage[add2];
@@ -56,13 +56,13 @@ if (navigator.userAgent.includes('iP')) {
 };
 
 
-console.log(add1)
+console.log(add1Loc)
 console.log(hasAds)
 
 
 if (getCookie(`admin`) != `true`) {
     if (hasAds == true) {
-        fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/website/websiteReport?device=${device}&location=${window.location.href}&add1=${advertImages[add1]}&add2=${advertImages[add2]}`)
+        fetch(`https://support-bot.autocode.dev/premium@dev/Guilds/MKGameworks/website/websiteReport?device=${device}&location=${window.location.href}&add1=${advertImages[add1Loc]}&add2=${advertImages[add2Loc]}`)
         .then((response) => response.json())
         .then((data) => console.log(data));
     } else {
